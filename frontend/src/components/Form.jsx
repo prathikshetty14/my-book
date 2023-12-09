@@ -14,7 +14,7 @@ export default function Form() {
       setTimeout(async () => {
         setLoading(true);
         try {
-          const res = await axios.get('http://localhost:8000/api/v1/formdata');
+          const res = await axios.get('https://my-book-reach-best.vercel.app/');
           setFormData(res.data[0].formMCQ);
           setLoading(false);
         } catch (error) {
@@ -37,7 +37,7 @@ export default function Form() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/bookdata', selectedOptions);
+      const response = await axios.post('https://my-book-reach-best.vercel.app/bookdata', selectedOptions);
       setBooksData(response.data.books);
     } catch (error) {
       console.error('Error fetching book data:', error);
