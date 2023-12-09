@@ -17,10 +17,6 @@ function App() {
           index: true,
           element: <Form />
         },
-        {
-          path: "/result",
-          element: <Result />
-        }
       ]
     }
   ])
